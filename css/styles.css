@@ -1,0 +1,680 @@
+/* --- Global Resets & Typography --- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fcfaf2; 
+    
+    /* A very subtle radial gradient that mimics how light naturally hits paper */
+    background-image: radial-gradient(circle at 50% 30%, #fffef9 0%, #f7f3e8 70%, #efeae0 100%);
+    
+    color: #2c2520;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+h1, h2, h3, p, .brand-text, .dish-name {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 1px; /* Gives the letters a little premium breathing room */
+}
+
+.hero-wrapper {
+    position: relative; /* Gjøre dette til ankerpunkt for den flytende menyen */
+    width: 100%;
+}
+
+/* --- Top Navigation Bar --- */
+.top-bar {
+    position: absolute; /* Løfter menyen opp fra den vanlige strømmen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Sikrer at menyen ligger øverst over bildet */
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    
+    /* FJERN FAST BAKGRUNN & SHADOW */
+    background: transparent; 
+    box-shadow: none;
+    
+    /* Legger til et lite slør øverst så hvit/gull tekst popper perfekt fram */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.brand-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ff9f43; /* Signatur-oransje */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.6); /* Sikrer god lesbarhet */
+}
+
+.nav-links a {
+    color: #ffffff; /* Hvit tekst for ren kontrast over bildet */
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #E1B12C; /* Gold highlight accent color */
+}
+
+main {
+    flex: 1; /* This acts like a spring, expanding to fill all empty space */
+}
+
+/* Main  */
+/* --- Top Banner Image Rules --- */
+.top-banner-container {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.top-banner-img {
+    width: 100%;
+    height: auto;
+    margin-top: -3%;
+    display: block;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+}
+
+/* --- Hero Section Styling --- */
+.hero-section {
+    text-align: center;
+    padding: 40px 30px;
+    background: linear-gradient(rgba(26, 30, 33, 0.95), rgba(26, 30, 33, 0.95)), url('../bilder/grill-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    width: 90%;
+    /* max-width: 1100px; */
+    position: relative;
+    z-index: 5;
+    margin: -130px auto 50px auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.badge {
+    background-color: #d63031; /* Vibrant grill-red tag */
+    color: white;
+    padding: 6px 12px;
+    font-weight: bold;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.hero-section h1 {
+    font-size: 2.2rem;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: #ff9f43; /* Warm fire orange accent text */
+}
+
+.tagline {
+    font-size: 1.25rem;
+    max-width: 800px;
+    width: 95%;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
+    color: #dfe6e9;
+}
+
+/* --- Call-To-Action Buttons --- */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 28px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background-color: #ff9f43;
+    color: #1a1e21;
+}
+
+.btn-primary:hover {
+    background-color: #ee5253;
+    color: white;
+}
+
+.btn-secondary {
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background-color: white;
+    color: #1a1e21;
+}
+
+
+/* --- Feature Grid Elements - ta bort?? --- */
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 60px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.highlight-card {
+    background: rgba(255, 255, 255, 0.7); /* Translucent overlay over paper texture */
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    padding: 25px 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.highlight-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+/* --- Story section --- */
+
+.story-section{
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.story-row{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.story-image{
+    flex: 0 0 40%;
+}
+.story-text{
+    flex: 1;
+}
+.story-image img{
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center 60%;
+    border-radius: 12px;
+    box-shadow: 0 8px 45px rgba(0, 0, 0, 0.1);
+}
+.story-row.reverse{
+    flex-direction: row-reverse;
+}
+.story-text h2{
+    font-size: 2.2rem;
+    color: #ff9f43;
+    margin-bottom: 15px;
+}
+.story-text p{
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #4a3f35;
+}
+
+.story-center{
+    text-align: center;
+    align-self: center;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 30px 20px;
+}
+.story-center h2{
+    font-size: 2.2rem;
+    color: #ff9f43;
+    margin-bottom: 15px;
+}
+.story-center p{
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #4a3f35;
+}
+
+/* --- Quick Info Layout --- */
+.quick-info {
+    background-color: #232b30;
+    color: #f5f6fa;
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 900px;
+    margin: 0 auto 60px auto;
+    text-align: center;
+}
+
+.quick-info h2 {
+    color: #ff9f43;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.info-columns {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.info-block h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+    color: white;
+    border-bottom: 2px solid #ff9f43;
+    padding-bottom: 5px;
+}
+
+
+
+
+
+
+/* Menu */
+.menu-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.paper-menu-section {
+    max-width: 750px;
+    margin: 10px auto;
+    padding: 20px;
+}
+
+.paper-menu-section h2 {
+    font-size: 2.2rem;
+    color: #1a1512; /* Deep ink brown */
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+.size-guide {
+    text-align: center;
+    font-style: italic;
+    color: #8c7e73;
+    font-size: 0.9rem;
+    margin-top: -30px;
+    margin-bottom: 40px;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    order: 3; 
+    flex-shrink: 0;
+}
+
+/* Individual price text styling */
+.price-val {
+    font-weight: bold;
+    color: #ff9f43; /* Your signature grill orange/gold */
+    font-size: 1.2rem;
+}
+
+/* Make the small "M:" and "L:" indicator less aggressive */
+.price-val small {
+    font-size: 0.8rem;
+    color: #8c7e73; /* Subtle ink gray */
+    text-transform: uppercase;
+    margin-right: 2px;
+}
+
+/* The separator slash */
+.price-separator {
+    color: #cbd5e1;
+    font-weight: normal;
+    font-size: 1.1rem;
+}
+
+/* --- Adjusted Dot Leader Rules --- */
+.menu-row dt {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a1512;
+    margin-bottom: 6px;
+}
+
+.menu-row dt::after {
+    content: ""; 
+    flex: 1;              /* Stretches to perfectly fill the empty center gap */
+    
+    /* 1. Use the native text rendering engine for clean, round, identical circles */
+    border-bottom: 2px dotted #cbd5e1; 
+    
+    /* 2. Vertically centers the dots with the exact baseline height of your font */
+    height: 0.85em;       
+    
+    /* 3. Generates the clean breathing-room gap on both sides of the dots */
+    margin: 0 15px; 
+    
+    order: 2;
+    
+    /* 4. EXPLICIT OVERRIDES: This cleanly deletes the old gradient background memory */
+    background-image: none !important;
+}
+
+.dish-name {
+    order: 1;
+    flex-shrink: 0;
+}
+
+
+
+
+.price {
+    order: 3;
+    color: #1a1512; /* Your signature warm grill-orange */
+    font-weight: bold;
+}
+.menu-row dd.dish-desc {
+    margin-left: 0; /* Resets default browser indent */
+    font-size: 1rem;
+    color: #4a3f35; /* Faded ink effect */
+    line-height: 1.5;
+    max-width: 85%; /* Prevents text from running all the way under the price */
+}
+
+.menu-row dd.dish-allergens {
+    margin-left: 0;
+    font-size: 0.8rem;
+    color: #8c7e73;
+    font-style: italic;
+    margin-top: 4px;
+}
+
+.fade-line {
+    border: 0;                  /* Removes the default ugly browser border */
+    height: 1px;                /* Makes it razor-thin */
+    max-width: 600px;           /* Centers it and keeps it from stretching too wide */
+    margin: 10px auto;          /* Gives generous spacing above and below the line */
+    background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(74, 63, 53, 0.4), rgba(0,0,0,0));
+}
+
+/* Contact area */
+.contact{
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+}
+
+.contact-head{
+    font-size: 2.5rem;
+    color: #1a1512;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.contact-sub {
+    font-size: 1.1rem;
+    color: #4a3f35;
+    margin-bottom: 30px;
+}
+.contact-info {
+    margin-bottom: 35px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #2c2520;
+}
+
+.contact-link {
+    color: #ff4943;          
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+
+
+.map {
+    width: 100%;             /* Allows the map wrapper to scale dynamically */
+    max-width: 600px;        /* Prevents the map from expanding too wide on desktop screens */
+    margin: 20px auto;       /* Centers the map horizontally on the page */
+    padding: 0 15px;         /* Creates a safe gutter space so the map doesn't jam against mobile edges */
+    box-sizing: border-box;  /* Ensures padding is calculated correctly within the width */
+}
+
+.map iframe {
+    width: 100% !important;  /* Overrides the rigid width="600" HTML attribute */
+    height: auto;            /* Maintains a natural aspect ratio */
+    min-height: 350px;       /* Prevents the map from flattening into a tiny line on mobile screens */
+    border-radius: 8px;      /* Optional: Smooths out the map corners to match your clean UI */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Optional: Adds a subtle depth shadow */
+}
+
+
+/* --- Footer Area --- */
+.main-footer {
+    background: #131e29;
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    position: relative;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    color: #b4b4b4;
+}
+ /* Facebook icon*/ 
+
+.fa {
+    font-size: 25px !important;         
+    color: #b4b4b4;              
+    text-decoration: none;
+    margin: 15px 20px;           
+    display: inline-block;       
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.fa:hover {
+    color: #ff9f43;              
+    transform: scale(1.15);      
+    text-shadow: 0 0 15px rgba(255, 159, 67, 0.6), 
+                 0 0 30px rgba(238, 82, 83, 0.4);
+}
+
+
+
+/* =========================================================
+   📱 MASTER MOBILE RESPONSIVE LAYOUT (Screens under 768px)
+   ========================================================= */
+@media (max-width: 768px) {
+    
+    /* --- 1. Navigation & Header --- */
+    .top-bar {
+        position: absolute;
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+        /* Mørkner litt ekstra på mobil slik at stablet tekst er lett å lese */
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+    
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .nav-links a {
+        margin: 0 8px; /* Removes the large desktop spacing */
+        font-size: 0.95rem;
+    }
+
+    .top-banner-container,
+    .top-banner-img {
+        max-height: none; 
+    }
+    .top-banner-img {
+        margin-top: 0;
+    }
+
+
+    .hero-section {
+        width: 95%;
+        margin-top: -40px;
+        margin-bottom: 30px;
+        padding: 30px 15px; /* Strammer inn padding på mobil */
+        border-radius: 12px;
+    }
+
+    .hero-section h1 {
+        font-size: 1.8rem; /* Sikrer at teksten ikke skyves ned på neste linje */
+    }
+
+
+    /* --- 2. Main Page (Index) Adjustments --- */
+    
+
+    .tagline {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    /* Stacks the buttons on top of each other for easy thumb-tapping */
+    .cta-buttons {
+        flex-direction: column;
+        max-width: 250px;
+        margin: 0 auto;
+        gap: 15px;
+    }
+
+    .quick-info {
+        padding: 25px 15px;
+    }
+
+    .info-columns {
+        flex-direction: column; /* Stacks hours, location, and contact */
+        gap: 25px;
+    }
+
+    .story-section {
+        gap: 50px;
+        margin: 40px auto;
+    }
+
+    /* På mobil stakkes bilde og tekst vertikalt */
+    .story-row, 
+    .story-row.reverse {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    .story-image{
+        width: 100%;
+        max-width: 380px;
+        margin: 0 auto;
+    }
+
+    .story-image img {
+        aspect-ratio: 4 / 3.5;
+        object-position: center;
+    }
+
+    .story-text h2, 
+    .story-center h2 {
+        font-size: 1.7rem;
+    }
+
+    .story-text p, 
+    .story-center p {
+        font-size: 1rem;
+    }
+
+    /* --- 3. Menu Page Adjustments --- */
+    .paper-menu-section {
+        padding: 15px 10px;
+    }
+
+    .paper-menu-section h2 {
+        font-size: 1.8rem;
+    }
+
+
+    /* Stacks the dish name above the price */
+    .menu-row dt {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        margin-bottom: 8px;
+    }
+
+    /* Kills the dotted line completely on mobile */
+    .menu-row dt::after {
+        display: none !important; 
+    }
+
+    /* Aligns the price block neatly to the left, adding a subtle solid border below it */
+    .price-container {
+        width: 100%;
+        justify-content: flex-start;
+        padding-bottom: 8px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08); 
+    }
+
+    /* Allows the ingredient text to utilize the whole phone width */
+    .menu-row dd.dish-desc {
+        max-width: 100%;
+        margin-top: 8px;
+    }
+
+    /* --- 4. Footer Adjustments --- */
+    .main-footer {
+        padding: 20px 10px;
+    }
+
+    .fa {
+        margin: 10px 15px; /* Slightly tighter spacing for social icons */
+    }
+}
