@@ -15,37 +15,97 @@
 <body>
 
     <header class="top-bar">
-        <div class="brand-area">
-            <span class="restaurant-icon">🍕</span>
-            <span class="brand-text">Vikhammer pizza og grill</span>
+            <div class="brand-area">
+                <a href="index.html" class="logo">
+                    <!-- Optional brand text/logo -->
+                 <h1>Vikhammer pizza &amp; <span class="grill"> Grill</span></h1>
+                </a>  
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Hjem</a>
+                <a href="menu.html">Meny</a>
+                <a href="kontakt.html" class="active">Kontakt</a>
+            </nav>
+
+        </header>
+
+        <div class="page-hero">
+        <div class="page-hero-title">
+            <h1>Kontakt Oss</h1>
+            <p>Vi gleder oss til å ønske deg velkommen</p>
         </div>
-        <nav class="nav-links">
-            <a href="index.html" >Hjem</a>
-            <a href="menu.html" >Meny</a>
-            <a href="kontakt.html" class="active">Kontakt</a>
-        </nav>
-        
-    </header>
-
-    <div class="contact">
-    <h2 class="contact-head">Kontakt Oss</h2>
-    <p class="contact-sub">Kom innom for en hyggelig matopplevelse.</p>
-    
-    <div class="contact-info">
-        <p><strong>📍 Adresse:</strong> Vikhammerløkka 1, 7560 Vikhammer</p>
-        <p><strong>📞 Telefon:</strong> <a href="tel:+4773970736" class="contact-link">73 97 07 36</a></p>
-        <p><strong>✉️ E-post:</strong> <a href="mailto:hei@sizzlergrill.no" class="contact-link">hei@sizzlergrill.no</a></p>
     </div>
+     <!-- Main Content Area -->
+    <main class="contact-main">
+        <div class="contact-container">
+            
+            <!-- Left Side: Refined Contact Info -->
+            <div class="contact-info-panel">
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    </div>
+                    <div class="info-details">
+                        <span class="info-label">Adresse</span>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Vikhammerløkka+1+7560+Vikhammer" 
+                        class="info-value info-link"
+                        target="_blank" 
+                        rel="noopener noreferrer" >
+                            <span class="info-value">Vikhammerløkka 1, 7560 Vikhammer</span>
+                        </a>
+                        
+                    </div>
+                </div>
 
-    <div class="map">
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1791.956743900994!2d10.6225672!3d63.4385913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x466d3969796fffff%3A0x7df6fa155b4ad19e!2sVikhammerl%C3%B8kka%201%2C%207560%20Vikhammer!5e0!3m2!1sno!2sno!4v1710000000000" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-    </div>
-</div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                    </div>
+                    <div class="info-details">
+                        <span class="info-label">Telefon</span>
+                        <a href="tel:+4773970736" class="info-value info-link">73 97 07 36</a>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </div>
+                    <div class="info-details">
+                        <span class="info-label">E-post</span>
+                        <a href="mailto:hei@sizzlergrill.no" class="info-value info-link">hei@sizzlergrill.no</a>
+                    </div>
+                </div>
+
+                <div class="info-card feature-card">
+                    <div class="info-icon">
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    </div>
+                    <div class="info-details">
+                        <span class="info-label">Åpningstider</span>
+                        <span class="info-value">Mandag - Torsdag: 12:00 - 22:00</span>
+                        <span class="info-value">Fredag - Lørdag: 12:00 - 23:00</span>
+                        <span class="info-value">Søndag: 12:00 - 22:00</span>
+                    
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Side: Google Maps -->
+            <div class="contact-map-panel">
+                <a href="https://www.google.com/maps/search/?api=1&query=Vikhammerløkka+1+7560+Vikhammer" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="map-link">
+                    <img src="bilder/kart-vikhammer.png" alt="Kart til Vikhammer Pizza og Grill" class="static-map-img">
+                    <span class="map-overlay-badge">Åpne i Google Maps <i class="fa fa-external-link"></i></span>
+                </a>
+            </div>
+
+        </div>
+    </main>
     
 
 

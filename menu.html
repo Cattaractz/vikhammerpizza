@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meny | [Restaurant Navn] - Ekte Italiensk Restaurant</title>
+    <title>Meny | Vikhammer pizza og grill </title>
     <meta name="description" content="Utforsk vår fyldige restaurantmeny med steinovnsbakt pizza, fersk pasta og nydelige desserter. Bestill bord eller takeaway i dag.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,25 +16,56 @@
 <body>
 
     <header class="top-bar">
-        <div class="brand-area">
-            <span class="restaurant-icon">🍕</span>
-            <span class="brand-text">Vikhammer pizza og grill</span>
-        </div>
-        <nav class="nav-links">
-            <a href="index.html" >Hjem</a>
-            <a href="menu.html" class="active" >Meny</a>
-            <a href="kontakt.html">Kontakt</a>
-        </nav>
-    </header>
+            <div class="brand-area">
+                <a href="index.html" class="logo">
+                    <!-- Optional brand text/logo -->
+                 <h1>Vikhammer pizza &amp; <span class="grill"> Grill</span></h1>
+                </a>                
+            </div>
+            <nav class="nav-links">
+                <a href="index.html" >Hjem</a>
+                <a href="menu.html" class="active">Meny</a>
+                <a href="kontakt.html">Kontakt</a>
+            </nav>
+        </header>
 
     <main class="menu-container">
         <header class="menu-intro">
+            
             <h1>Vår Meny</h1>
             <p>Alt lages fra bunnen av med ferske varer.</p>
         </header>
+        <div class="nav-container">
+            <div class="nav-menu">
+                <a href="#pizza">Pizza</a>
+                <a href="#innbakt">Innbakt Pizza</a>
+                <a href="#kjott">Kjøttretter</a>
+                <a href="#hamburger">Hamburger</a>
+                <a href="#kebab">Kebab</a>
+                <a href="#pasta">Pasta</a>
+                <a href="#salat">Salat</a>
+                <a href="#sma">Småretter</a>
+                <a href="#barn">Barnemeny</a>
+                <a href="#drikke">Drikke</a>
+            </div>
+        </div>
+        <select class="nav-select" id="menu-dropdown" onchange="if (this.value) window.location.href = this.value;">
+            <option value="" disabled selected>Meny</option>
+            <option value="#pizza">Pizza</option>
+            <option value="#innbakt">Innbakt Pizza</option>
+            <option value="#kjott">Kjøttretter</option>
+            <option value="#hamburger">Hamburger</option>
+            <option value="#kebab">Kebab</option>
+            <option value="#pasta">Pasta</option>
+            <option value="#salat">Salat</option>
+            <option value="#sma">Småretter</option>
+            <option value="#barn">Barnemeny</option>
+            <option value="#drikke">Drikke</option>
+        </select>
+        
         <hr class="fade-line">
 
-        <section class="paper-menu-section" aria-labelledby="pizza-heading">
+        <section class="paper-menu-section" aria-labelledby="pizza-heading" id="pizza">
             <h2 id="pizza-heading">Pizza</h2>
             <p class="size-guide">M = 30cm / L = 40cm</p>
 
@@ -55,31 +86,270 @@
                             </span>
                         </dt>
                         <dd class="dish-desc">Tomatsaus og ost</dd>
-                        <dd class="dish-allergens">Allergener: Hvete, Melk</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
                     </div>
                     <div class="menu-row">
                         <dt>
                             <span class="dish-name">Vesuvio</span>
                             <span class="price-container">
-                                <span class="price-val"><small>M:</small> 195,-</span>
+                                <span class="price-val"><small>M:</small> 165,-</span>
                                 <span class="price-separator">/</span>
-                                <span class="price-val"><small>L:</small> 245,-</span>
+                                <span class="price-val"><small>L:</small> 260,-</span>
                             </span>
                         </dt>
                         <dd class="dish-desc">Tomatsaus, ost og skinke</dd>
-                        <dd class="dish-allergens">Allergener: Hvete, Melk</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
                     </div>
+                    <!-- 1. Hawaii -->
                     <div class="menu-row">
                         <dt>
-                            <span class="dish-name">Vesuvio</span>
+                            <span class="dish-name">Hawaii</span>
                             <span class="price-container">
-                                <span class="price-val"><small>M:</small> 195,-</span>
+                                <span class="price-val"><small>M:</small> 170,-</span>
                                 <span class="price-separator">/</span>
-                                <span class="price-val"><small>L:</small> 245,-</span>
+                                <span class="price-val"><small>L:</small> 265,-</span>
                             </span>
                         </dt>
-                        <dd class="dish-desc">Tomatsaus, ost og skinke</dd>
-                        <dd class="dish-allergens">Allergener: Hvete, Melk</dd>
+                        <dd class="dish-desc">Tomatsaus, ost, skinke og ananas</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <!-- 2. Vikhammer spesial -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Vikhammer Spesial</span>
+                            <span class="price-container">
+                                <span class="price-val"><small>M:</small> 180,-</span>
+                                <span class="price-separator">/</span>
+                                <span class="price-val"><small>L:</small> 280,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Tomatsaus, ost, biff, løk og champignon</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <!-- 3. Trønder spesial -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Trønder Spesial</span>
+                            <span class="price-container">
+                                <span class="price-val"><small>M:</small> 185,-</span>
+                                <span class="price-separator">/</span>
+                                <span class="price-val"><small>L:</small> 285,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Tomatsaus, ost, kjøttdeig, løk og bacon</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <!-- 4. Kebabpizza -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Kebabpizza</span>
+                            <span class="price-container">
+                                <span class="price-val"><small>M:</small> 185,-</span>
+                                <span class="price-separator">/</span>
+                                <span class="price-val"><small>L:</small> 285,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Tomatsaus, ost, kebabkjøtt, løk, mais og dressing</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Sellerig</dd>
+                    </div>
+
+                    <!-- 5. Rosenborg -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Rosenborg</span>
+                            <span class="price-container">
+                                <span class="price-val"><small>M:</small> 180,-</span>
+                                <span class="price-separator">/</span>
+                                <span class="price-val"><small>L:</small> 280,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Tomatsaus, ost, biff, pepperoni og paprika</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <!-- 6. Roma -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Roma</span>
+                            <span class="price-container">
+                                <span class="price-val"><small>M:</small> 180,-</span>
+                                <span class="price-separator">/</span>
+                                <span class="price-val"><small>L:</small> 280,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Tomatsaus, ost, skinke og champignon</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <!-- 7. Romantika -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Romantika</span>
+                            <span class="price-container">
+                                <span class="price-val"><small>M:</small> 180,-</span>
+                                <span class="price-separator">/</span>
+                                <span class="price-val"><small>L:</small> 280,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Tomatsaus, ost, kyiling, bacon og ananas</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <!-- 8. Husets spesial -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Husets Spesial</span>
+                            <span class="price-container">
+                                <span class="price-val"><small>M:</small> 180,-</span>
+                                <span class="price-separator">/</span>
+                                <span class="price-val"><small>L:</small> 280,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Tomatsaus, ost, biff, skinke, pepperoni, løk og paprika</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <!-- 9. Gyrospizza -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Gyrospizza</span>
+                            <span class="price-container">
+                                <span class="price-val"><small>M:</small> 190,-</span>
+                                <span class="price-separator">/</span>
+                                <span class="price-val"><small>L:</small> 290,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Tomatsaus, ost, gyroskjøtt, rødløk, tomat og dressing</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <!-- 10. Nabo spesial -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Nabo Spesial</span>
+                            <span class="price-container">
+                                <span class="price-val"><small>M:</small> 185,-</span>
+                                <span class="price-separator">/</span>
+                                <span class="price-val"><small>L:</small> 285,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Tomatsaus, ost, biff, marinade og jalapeños</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <!-- 11. Amigo -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Amigo</span>
+                            <span class="price-container">
+                                <span class="price-val"><small>M:</small> 180,-</span>
+                                <span class="price-separator">/</span>
+                                <span class="price-val"><small>L:</small> 280,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Tomatsaus, ost, kjøttdeig, nachos, jalapeños og tacosaus</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <!-- 12. Parma -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Parma</span>
+                            <span class="price-container">
+                                <span class="price-val"><small>M:</small> 215,-</span>
+                                <span class="price-separator">/</span>
+                                <span class="price-val"><small>L:</small> 300,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Tomatsaus, ost, parmaskinke, ruccola og parmesan</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <!-- 13. Chef spesial -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Chef Spesial</span>
+                            <span class="price-container">
+                                <span class="price-val"><small>M:</small> 180,-</span>
+                                <span class="price-separator">/</span>
+                                <span class="price-val"><small>L:</small> 280,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Tomatsaus, ost, biff, kylling, champignon og løk</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <!-- 14. Nachopizza -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Nachopizza</span>
+                            <span class="price-container">
+                                <span class="price-val"><small>M:</small> 190,-</span>
+                                <span class="price-separator">/</span>
+                                <span class="price-val"><small>L:</small> 290,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Tomatsaus, ost, kjøttdeig, nachos og mais</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <!-- 15. Pollo meksikana -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Pollo Meksikana</span>
+                            <span class="price-container">
+                                <span class="price-val"><small>M:</small> 190,-</span>
+                                <span class="price-separator">/</span>
+                                <span class="price-val"><small>L:</small> 290,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Tomatsaus, ost, marinert kylling, jalapeños og løk</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <!-- 16. Vegetale -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Vegetale</span>
+                            <span class="price-container">
+                                <span class="price-val"><small>M:</small> 180,-</span>
+                                <span class="price-separator">/</span>
+                                <span class="price-val"><small>L:</small> 280,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Tomatsaus, ost, champignon, løk, paprika, mais og oliven</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <!-- 17. Mana Rosa -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Mana Rosa</span>
+                            <span class="price-container">
+                                <span class="price-val"><small>M:</small> 170,-</span>
+                                <span class="price-separator">/</span>
+                                <span class="price-val"><small>L:</small> 275,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Tomatsaus, ost, skinke, gorgonzola og champignon</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <!-- 18. Reker pizza -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Reker Pizza</span>
+                            <span class="price-container">
+                                <span class="price-val"><small>M:</small> 190,-</span>
+                                <span class="price-separator">/</span>
+                                <span class="price-val"><small>L:</small> 290,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Tomatsaus, ost, reker, hvitløk og ananas</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri, Skalldyr</dd>
                     </div>
 
                 </dl>
@@ -91,11 +361,414 @@
 
         <hr class="fade-line">
 
-        <section class="paper-menu-section" aria-labelledby="pizza-heading">
-            <h2 id="pizza-heading">Pasta</h2>
-        
+        <section class="paper-menu-section" aria-labelledby="pizza-heading" id="innbakt">
+            <h2 id="pizza-heading">Innbakt pizza</h2>
 
-          
+            <div class="category-grid">
+                
+                <dl class="menu-list">
+        
+                    <!-- Item 1 -->
+                    <!-- 1. Calzone -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Calzone</span>
+                            <span class="price-container">
+                                <span class="price-val"> 180,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Innbakt pizza med tomatsaus, ost og skinke</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <!-- 2. Ciao Ciao -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Ciao Ciao</span>
+                            <span class="price-container">
+                                <span class="price-val"> 200,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Innbakt pizza med biffkjøtt, løk og sjampinjong</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <!-- 3. Paradiso -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Paradiso</span>
+                            <span class="price-container">
+                                <span class="price-val"> 185,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Innbakt pizza med skinke og sjampinjong</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                </dl>
+            </div>
+        </section>
+
+        <hr class="fade-line">
+
+        <section class="paper-menu-section" aria-labelledby="pizza-heading" id="kjott">
+            <h2 id="pizza-heading">Kjøttretter</h2>
+
+            <div class="category-grid">
+                
+                <dl class="menu-list">
+        
+                    <!-- Item 1 -->
+                    <<!-- 1. Grillet kylling -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Grillet kylling</span>
+                            <span class="price-container">
+                                <span class="price-val"> 210,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Serveres med pommes frites og salat</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <!-- 2. Løvstek -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Løvstek</span>
+                            <span class="price-container">
+                                <span class="price-val"> 210,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Serveres med pommes frites, salat og saus</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <!-- 3. Biffsnadder -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Biffsnadder</span>
+                            <span class="price-container">
+                                <span class="price-val"> 235,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Biffkjøtt med løk, paprika, champignon, pommes frites og bearnaise</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <!-- 4. Hvitløksnadder -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Hvitløksnadder</span>
+                            <span class="price-container">
+                                <span class="price-val"> 235,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Biffkjøtt med hvitløksdressing, løk, paprika, champignon og pommes frites</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <!-- 5. Peppersnadder -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Peppersnadder</span>
+                            <span class="price-container">
+                                <span class="price-val"> 235,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Biffkjøtt med peppersaus, løk, paprika, champignon og pommes frites</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <!-- 6. Kyllingsnadder -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Kyllingsnadder</span>
+                            <span class="price-container">
+                                <span class="price-val"> 235,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Kyllingkjøtt med løk, paprika, champignon, pommes frites og saus</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <!-- 7. Fish & Chips -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Fish & Chips</span>
+                            <span class="price-container">
+                                <span class="price-val"> 200,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Panert fisk med pommes frites, remulade og sitron</dd>
+                        <dd class="dish-allergens">Allergener: Fisk, Gluten, Soya, Melk, Selleri </dd>
+                    </div>
+
+                    <!-- 8. Pepperbiff -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Pepperbiff</span>
+                            <span class="price-container">
+                                <span class="price-val"> 300,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Mør biff med peppersaus, grønnsaker og pommes frites</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <!-- 9. Biff med bearnaise -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Biff med Bearnaise</span>
+                            <span class="price-container">
+                                <span class="price-val"> 300,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Mør biff med bearnaisesaus, grønnsaker og pommes frites</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <!-- 10. Gresk biff -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Gresk Biff</span>
+                            <span class="price-container">
+                                <span class="price-val"> 300,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Biffkjøtt med fetaost, oliven, rødløk, saus og pommes frites</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <!-- 11. Pollo ala Indiana -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Pollo ala Indiana</span>
+                            <span class="price-container">
+                                <span class="price-val"> 270,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Kyllingrett med karritomat-saus, grønnsaker og ris eller pommes frites</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <!-- 12. Pollo ala Rosa -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Pollo ala Rosa</span>
+                            <span class="price-container">
+                                <span class="price-val"> 270,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Kyllingrett medfløtesaus, sjampinjong, grønnsaker og ris eller pommes frites</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                </dl>
+            </div>
+        </section>
+
+        <hr class="fade-line">
+
+
+
+        <section class="paper-menu-section" aria-labelledby="pizza-heading" id="hamburger">
+            <h2 id="pizza-heading">Hamburger</h2>
+            <div class="size-guide">Tallerken tillegg: Serveres med chips 49,-</div>
+
+            <div class="category-grid">
+                
+                <dl class="menu-list">
+        
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Hamburger</span>
+                            <span class="price-container">
+                                <span class="price-val"><small>160gr:</small> 120,-</span>
+                                <span class="price-separator">/</span>
+                                <span class="price-val"><small>200gr:</small> 140,-</span>
+                                <span class="price-separator">/</span>
+                                <span class="price-val"><small>333gr:</small> 200,-</span>
+                            </span>
+                        </dt>
+                        
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+                    
+
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Cheeseburger</span>
+                            <span class="price-container">
+                                <span class="price-val"><small>160gr:</small> 130,-</span>
+                                <span class="price-separator">/</span>
+                                <span class="price-val"><small>200gr:</small> 150,-</span>
+                                <span class="price-separator">/</span>
+                                <span class="price-val"><small>333gr:</small> 205,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Baconcheeseburger</span>
+                            <span class="price-container">
+                                <span class="price-val"><small>160gr:</small> 140,-</span>
+                                <span class="price-separator">/</span>
+                                <span class="price-val"><small>200gr:</small> 190,-</span>
+                                <span class="price-separator">/</span>
+                                <span class="price-val"><small>333gr:</small> 215,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Hawaiiburger</span>
+                            <span class="price-container">
+                                <span class="price-val"><small>160gr:</small> 130,-</span>
+                                <span class="price-separator">/</span>
+                                <span class="price-val"><small>200gr:</small> 150,-</span>
+                                <span class="price-separator">/</span>
+                                <span class="price-val"><small>333gr:</small> 205,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                </dl>
+
+            </div>
+        </section>
+
+        <hr class="fade-line">
+
+        <section class="paper-menu-section" aria-labelledby="pizza-heading" id="kebab">
+            <h2 id="pizza-heading">Kebab</h2>
+
+            <div class="category-grid">
+                
+                <dl class="menu-list">
+        
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Kebabtallerken</span>
+                            <span class="price-container">
+                                <span class="price-val"> 225,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Serveres med pommes frites, salat og dressing</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Kyllingkebabtallerken</span>
+                            <span class="price-container">
+                                <span class="price-val"> 225,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Kyllingkebab med pommes frites, salat og dressing</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Mixkebabtallerken</span>
+                            <span class="price-container">
+                                <span class="price-val"> 235,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Blanding av kebabkjøtt og kyllingkebab med pommes frites, salat og dressing</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Gyrostallerken</span>
+                            <span class="price-container">
+                                <span class="price-val"> 260,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Gyrostallerken med pommes frites, salat og dressing</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Viva spesial</span>
+                            <span class="price-container">
+                                <span class="price-val"> 260,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Husets spesielle kebabtallerken med ekstra tilbehør</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Kebab i pita</span>
+                            <span class="price-container">
+                                <span class="price-val"> 165,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Kebabkjøtt i pitabrød med salat og dressing</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Kyllingkebab i pita</span>
+                            <span class="price-container">
+                                <span class="price-val"> 165,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Kyllingkebab i pitabrød med salat og dressing</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Rullekebab</span>
+                            <span class="price-container">
+                                <span class="price-val"> 170,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Kebabkjøtt i hjemmelaget rullebrød med salat og dressing</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Kyllingrullekebab</span>
+                            <span class="price-container">
+                                <span class="price-val"> 170,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Kyllingkebab i hjemmelaget rullebrød med salat og dressing</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Gyrosrull</span>
+                            <span class="price-container">
+                                <span class="price-val"> 190,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Gyroskjøtt i rullebrød med salat og dressing</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                </dl>
+            </div>
+        </section>
+
+        <hr class="fade-line">
+
+        <section class="paper-menu-section" aria-labelledby="pizza-heading" id="pasta">
+            <h2 id="pizza-heading">Pasta</h2>
 
             <div class="category-grid">
                 
@@ -109,15 +782,206 @@
                                 <span class="price-val"> 185,-</span>
                             </span>
                         </dt>
-                        <dd class="dish-desc">Kjøttfylt pasta med biffkjøtt, peppersaus. Gratinert i ovn.</dd>
+                        <dd class="dish-desc">Kjøttfylt pasta med biffkjøtt, peppersaus. Gratinert i ovn</dd>
                         <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
                     </div>
+
                     <div class="menu-row">
                         <dt>
                             <span class="dish-name">Lasagne al forno</span>
                             <span class="price-container">
+                                <span class="price-val"> 210,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Gratinert bladmakaroni med ost og kjøttsaus. Serveres med brød og salat</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Penne pasta kylling</span>
+                            <span class="price-container">
+                                <span class="price-val"> 185,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Pennepasta med kylling, fløtesaus og grønnsaker</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Spaghetti ala bolognese</span>
+                            <span class="price-container">
+                                <span class="price-val"> 185,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Spaghetti med tradisjonell italiensk kjøttsaus</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Spaghetti ala carbonara</span>
+                            <span class="price-container">
+                                <span class="price-val"> 185,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Spaghetti med bacon, fløtesaus, egg og pepper</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                </dl>
+            </div>
+        </section>
+
+        <hr class="fade-line">
+
+        <section class="paper-menu-section" aria-labelledby="pizza-heading" id="salat">
+            <h2 id="pizza-heading">Salat</h2>
+            <div class="size-guide">Alle salater serveres med brød</div>
+
+            <div class="category-grid">
+                
+                <dl class="menu-list">
+        
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Vegetarsalat</span>
+                            <span class="price-container">
+                                <span class="price-val"> 180,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Frisk salat med sesongens grønnsaker, mais, oliven og dressing</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Kyllingsalat</span>
+                            <span class="price-container">
+                                <span class="price-val"> 180,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Frisk salat med saftig kylling, mais, tomater og dressing</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Skinkesalat</span>
+                            <span class="price-container">
+                                <span class="price-val"> 180,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Frisk salat med skinke, ost, mais, tomater og dressing</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                </dl>
+            </div>
+        </section>
+
+        <hr class="fade-line">
+
+        <section class="paper-menu-section" aria-labelledby="pizza-heading" id="sma">
+            <h2 id="pizza-heading">Småretter</h2>
+
+            <div class="category-grid">
+                
+                <dl class="menu-list">
+        
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Løkringer</span>
+                            <span class="price-container">
+                                <span class="price-val"><small>6 stk:</small> 60,-</span>
+                                <span class="price-separator">/</span>
+                                <span class="price-val"><small>10 stk:</small> 115,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Sprøytede og frityrstekte løkringer</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Mozzarella Sticks</span>
+                            <span class="price-container">
+                                <span class="price-val"><small>6 stk:</small> 60,-</span>
+                                <span class="price-separator">/</span>
+                                <span class="price-val"><small>10 stk:</small> 115,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Frityrstekte mozzarellasticks med en sprø skorpe</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Kyllingnuggets</span>
+                            <span class="price-container">
+                                <span class="price-val"><small>6 stk:</small> 60,-</span>
+                                <span class="price-separator">/</span>
+                                <span class="price-val"><small>10 stk:</small> 115,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Saftige kyllingnuggets</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Chilli Cheese</span>
+                            <span class="price-container">
+                                <span class="price-val"><small>6 stk:</small> 60,-</span>
+                                <span class="price-separator">/</span>
+                                <span class="price-val"><small>10 stk:</small> 115,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Frityrstekte ostenbiter fylt med chili for litt ekstra styrke</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Chipsmix</span>
+                            <span class="price-container">
+                                <span class="price-val"> 125,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc">Ost, skinke og dressing</dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+
+                </dl>
+            </div>
+        </section>
+
+        <hr class="fade-line">
+
+        <section class="paper-menu-section" aria-labelledby="pizza-heading" id="barn">
+            <h2 id="pizza-heading">Barnemeny</h2>
+
+            <div class="category-grid">
+                
+                <dl class="menu-list">
+        
+                    <!-- Item 1 -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Humburger med chips</span>
+                            <span class="price-container">
+                                <span class="price-val"> 115,-</span>
+                            </span>
+                        </dt>
+                        <dd class="dish-desc"></dd>
+                        <dd class="dish-allergens">Allergener: Gluten, Soya, Melk, Selleri</dd>
+                    </div>
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Pølse med chips</span>
+                            <span class="price-container">
                                 
-                                <span class="price-val">210,-</span>
+                                <span class="price-val">115,-</span>
                             </span>
                         </dt>
                         <dd class="dish-desc">Gratinert bladmakaroni med ost og kjøttsaus. Serveres med brød og salat.</dd>
@@ -125,11 +989,45 @@
                     </div>
 
                 </dl>
-
-                
-
             </div>
         </section>
+
+        <hr class="fade-line">
+
+        <section class="paper-menu-section" aria-labelledby="pizza-heading" id="drikke">
+            <h2 id="pizza-heading">Drikke</h2>
+
+            <div class="category-grid">
+                
+                <dl class="menu-list">
+        
+                    <!-- Item 1 -->
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Brus</span>
+                            <span class="price-container">
+                                <span class="price-val"><small>L:</small> 35,-</span>
+                                <span class="price-separator">/</span>
+                                <span class="price-val"><small>S:</small> 50,-</span>
+                            </span>
+                        </dt>
+                    </div>
+                    <div class="menu-row">
+                        <dt>
+                            <span class="dish-name">Sol drikk</span>
+                            <span class="price-container">
+                                
+                                <span class="price-val">25,-</span>
+                            </span>
+                        </dt>
+                    </div>
+
+                </dl>
+            </div>
+        </section>
+
+        <hr class="fade-line">
+
     </main>
 
     <footer class="main-footer">
