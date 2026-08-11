@@ -977,6 +977,10 @@ main {
 
 
     /* Stacks the dish name above the price */
+    .menu-row{
+        margin-bottom: 28px;
+    }
+
     .menu-row dt {
         flex-direction: column;
         align-items: flex-start;
@@ -994,7 +998,7 @@ main {
         width: 100%;
         justify-content: flex-start;
         padding-bottom: 8px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.08); 
+        border-bottom: none; 
     }
 
     /* Allows the ingredient text to utilize the whole phone width */
