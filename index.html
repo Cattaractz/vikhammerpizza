@@ -15,6 +15,10 @@
 <body>
 
     <section class="hero-fullscreen">
+        <picture class="hero-media">
+            <source media="(max-width: 768px)" srcset="bilder/steakfront-mobile.webp">
+            <img src="bilder/steakfront.jpg" alt="" width="1600" height="900" fetchpriority="high">
+        </picture>
         <!-- TOP NAVIGATION BAR -->
         <header class="top-bar">
             <div class="brand-area">
@@ -48,8 +52,19 @@
     <!-- Seksjon 1: Bilde til venstre, tekst til høyre -->
     <div class="story-row">
         <div class="story-image">
-            <img src="bilder/pizza.jpg" alt="Nystekt pizza">
-        </div>
+            <picture>
+                <source srcset="bilder/pizzapic-mobile.webp" type="image/webp" media="(max-width: 768px)">
+                <source srcset="bilder/pizzapic.jpg" type="image/jpg">
+                <img
+                src="bilder/pizzapic.jpg"
+                alt="Nystekt pizza"
+                width="600"
+                height="800"
+                loading="lazy"
+                decoding="async"
+                >
+            </picture>
+            </div>
         <div class="story-text">
             <h2>Nystekt Pizza</h2>
             <p>Sprø bunn, god saus og rikelig med fyll. Vi har et bredt utvalg av klassiske favoritter laget for enhver smak.</p>
@@ -59,7 +74,16 @@
     <!-- Seksjon 2: Tekst til venstre, bilde til høyre -->
     <div class="story-row reverse">
         <div class="story-image">
-            <img src="bilder/pasta.jpg" alt="Saftig burger">
+            <source srcset="bilder/pastapic-mobile.webp" type="image/webp" media="(max-width: 768px)">
+            <source srcset="bilder/pizzapic.jpg" type="image/jpg">
+            <img
+            src="bilder/pastapic.jpg"
+            alt="Pasta med kjøttsaus"
+            width="600"
+            height="800"
+            loading="lazy"
+            decoding="async"
+            >
         </div>
         <div class="story-text">
             <h2>Pasta & Grill</h2>
